@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="image/websiteimage.webp" />
+    <title>GlowNest | Order History</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background-color: #fcf5f7;
+            color: #333;
+        }
+
+        .header-container {
+            background-color: white;
+            padding: 20px 40px;
+            box-shadow: 0 4px 10px rgba(114, 47, 55, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #722f37;
+        }
+
+        .back-btn {
+            padding: 10px 20px;
+            background-color: #722f37;
+            color: #fbcce1;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(114, 47, 55, 0.2);
+        }
+
+        .back-btn:hover {
+            background-color: #5a242b;
+            transform: translateY(-2px);
+        }
+
+        .orders-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(114, 47, 55, 0.08);
+        }
+
+        .order-card {
+            border-left: 6px solid #722f37;
+            background: #fdfafb;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-details h4 {
+            color: #722f37;
+            margin: 0 0 8px 0;
+            font-size: 18px;
+        }
+
+        .order-details p {
+            margin: 0 0 4px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .status-badge {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header Navigation -->
+    <div class="header-container">
+        <h1 style="color: #722f37; margin: 0; font-size: 24px;">GlowNest <span style="font-size: 16px; font-weight: normal; color: #666;">| Order History</span></h1>
+        
+        <!-- Back to Home Button (Change href to your actual home page file name) -->
+        <a href="index.html" class="back-btn">← Back to Home Page</a>
+    </div>
+
+    <!-- Main Orders Area -->
+    <div class="orders-container">
+        <h2 style="text-align: center; color: #722f37; margin-bottom: 30px;">Your Universal Ledger</h2>
+        <div id="masterLedgerContainer">
+            <!-- JavaScript will inject orders here -->
+        </div>
+    </div>
+
+    <!-- JavaScript to load orders instantly -->
+    <script>
+        window.addEventListener('DOMContentLoaded', loadUniversalOrders);
+
+        function loadUniversalOrders() {
+            const ledger = document.getElementById('masterLedgerContainer');
+            
+            // Pull the shared cart data from browser storage
+            const db = JSON.parse(localStorage.getItem('glowStore')) || [];
+            
+            if(db.length === 0) {
+                ledger.innerHTML = "<p style='text-align: center; color: #888; font-size: 16px; padding: 40px 0;'>Your royal collection is currently empty. Start shopping to fill your ledger!</p>";
+                return;
+            }
+
+            // Generate the unified order list
+            ledger.innerHTML = db.reverse().map(order => `
+                <div class="order-card">
+                    <div class="order-details">
+                        <h4>${order.name}</h4>
+                        <p><strong>Customer:</strong> ${order.user} | ${order.phone}</p>
+                        <p><strong>Shipping Address:</strong> ${order.address}</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="status-badge">Confirmed</span>
+                        <p style="margin: 0; font-size: 13px; color: #777;"><strong>Delivery:</strong> ${order.delivery}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+
+</body>
+</html>

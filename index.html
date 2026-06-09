@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui/material-ui.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="icon" type="image/svg+xml" href="image/websiteimage.webp" />
 <style>
     body {
         font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
@@ -1257,19 +1258,86 @@ footer .contact-info h2 {
     document.body.appendChild(confetti);
   }
 </script>
-  <header class="glownest-main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; position: relative; z-index: 1000;">
-    <h1 class="glownest-main-title" style="margin: 0;">GlowNest - Facial Products</h1>
+<header class="glownest-main-header" style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 20px 30px; position: relative; z-index: 1000;">
     
-    <div style="display: flex; align-items: center; padding-top: 8px;">
-        <span id="dynamic-profile-slot" style="display: block;">
-            <a href="http://127.0.0.1:5502/facial-product.html" class="scanner-profile-link" title="Open Photo Scanner" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="scanner-profile-icon" style="width: 26px; height: 26px; color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#e5a9b4'" onmouseout="this.style.color='#ffffff'">
-                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
-                </svg>
-            </a>
-        </span>
+    <div></div>
+
+    <h1 class="glownest-main-title" style="margin: 0; text-align: center; color: #722f37;">GlowNest - Facial Products</h1>
+    
+    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-end; align-items: center; gap: 15px;">
+        
+        <a href="https://rebekkha.github.io/face-Scanner/" target="_blank" title="Open AI Skin Scanner" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 28px; height: 28px; color: #722f37; transition: color 0.3s;" onmouseover="this.style.color='#e5a9b4'" onmouseout="this.style.color='#722f37'">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+            </svg>
+        </a>
+
+        <a href="http://localhost:5176/" target="_blank" title="Login / Open Profile" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 28px; height: 28px; color: #722f37; transition: color 0.3s;" onmouseover="this.style.color='#e5a9b4'" onmouseout="this.style.color='#722f37'">
+                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+
+       <!-- 3. NEW: Universal Order History Icon -->
+<a href="orders.html" target="_blank" title="View All Orders" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; position: relative;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 28px; height: 28px; color: #722f37; transition: color 0.3s;" onmouseover="this.style.color='#e5a9b4'" onmouseout="this.style.color='#722f37'">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+    </svg>
+    <!-- Dynamic Notification Badge -->
+    <span id="globalCartCount" style="position: absolute; top: -6px; right: -8px; background: #722f37; color: #fbcce1; border-radius: 50%; font-size: 11px; width: 18px; height: 18px; display: flex; justify-content: center; align-items: center; font-weight: bold; font-family: sans-serif;">0</span>
+</a>
+
     </div>
 </header>
+
+<div id="universal-orders" style="max-width: 800px; margin: 40px auto; padding: 30px; background: #fcf5f7; border: 2px solid #722f37; border-radius: 15px; display: none;">
+    <h2 style="text-align: center; color: #722f37; margin-bottom: 30px;">Your GlowNest Orders</h2>
+    <div id="masterLedgerContainer">
+        </div>
+</div>
+
+<script>
+    // Automatically check for orders when the page loads
+    window.addEventListener('DOMContentLoaded', updateGlobalCartCount);
+
+    function updateGlobalCartCount() {
+        // Pulls the combined order list from all your separate product pages
+        const db = JSON.parse(localStorage.getItem('glowStore')) || [];
+        document.getElementById('globalCartCount').innerText = db.length;
+    }
+
+    function loadUniversalOrders() {
+        const orderDiv = document.getElementById('universal-orders');
+        const ledger = document.getElementById('masterLedgerContainer');
+        const db = JSON.parse(localStorage.getItem('glowStore')) || [];
+        
+        // Toggle the visibility of the order section
+        orderDiv.style.display = orderDiv.style.display === 'none' || orderDiv.style.display === '' ? 'block' : 'none';
+
+        if(db.length === 0) {
+            ledger.innerHTML = "<p style='text-align: center; color: #666;'>Your royal collection is currently empty.</p>";
+            return;
+        }
+
+        // Generate the unified order list
+        ledger.innerHTML = db.reverse().map(order => `
+            <div style="border-left: 5px solid #722f37; background: #ffffff; padding: 20px; margin-bottom: 15px; border-radius: 0 10px 10px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <h4 style="color: #722f37; margin: 0 0 5px 0;">${order.name}</h4>
+                        <p style="margin: 0 0 5px 0; font-size: 14px; color: #555;"><strong>Ordered By:</strong> ${order.user} | ${order.phone}</p>
+                        <p style="margin: 0; font-size: 13px; color: #777;"><strong>Delivery To:</strong> ${order.address}</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: bold;">Confirmed</span>
+                        <p style="margin: 8px 0 0 0; font-size: 12px; color: #666;">Expected: ${order.delivery}</p>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
