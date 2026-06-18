@@ -111,14 +111,15 @@ export default function SkinScanner() {
     setIsFaceAligned(false); 
   };
 
-  const captureSecondImageAndAnalyze = async () => {
+ const captureSecondImageAndAnalyze = async () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedCloseUp(imageSrc);
     setStatusMessage("Analyzing structural matrix and skin texture...");
     setScanStep(3);
 
     try {
-      const response = await fetch('http://localhost:5000/api/analyze-skin', {
+      // THIS IS THE UPDATED LINE WITH YOUR RENDER URL
+      const response = await fetch('https://glownest-facial-product.onrender.com/api/analyze-skin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
